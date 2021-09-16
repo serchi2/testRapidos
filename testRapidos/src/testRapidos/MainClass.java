@@ -9,6 +9,7 @@ public class MainClass {
 		
 			int i, sum; sum = 10; 
 			String s= "this is real code";
+			String n= "vamos a hacer un push a ver si se ejecuta la cosa esta";
 			try { 
 				
 			for (i = -1; i < 3 ;++i) 
@@ -17,6 +18,7 @@ public class MainClass {
 			catch(ArithmeticException e) { 
 			System.out.print("0");  
 			System.out.println(s);
+			System.out.println(n);
 			} 
 			System.out.print(sum); }
 
