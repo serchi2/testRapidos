@@ -8,12 +8,15 @@ public class MainClass {
 		
 		
 			int i, sum; sum = 10; 
+			String s= "this is real code";
 			try { 
+				
 			for (i = -1; i < 3 ;++i) 
 			sum = (sum / i); 
 			} 
 			catch(ArithmeticException e) { 
-			System.out.print("0");        
+			System.out.print("0");  
+			System.out.println(s);
 			} 
 			System.out.print(sum); }
 
