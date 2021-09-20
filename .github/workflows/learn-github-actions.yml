@@ -8,13 +8,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
-
-- name: Action to run java checkstyle
-  # You may pin to the exact commit or the version.
-  # uses: nitinsh99/checkstyle-action@d18a1dbe6312264fa572e638fc3211714a892f46
-  uses: nitinsh99/checkstyle-action@1.0.0
+      - uses: nitinsh99/checkstyle-action@1.0.0
   with:
     # GITHUB_TOKEN.
     github_token: # optional, default is ${{ github.token }}
@@ -36,3 +30,9 @@ Default is `false`.
     workdir: # optional, default is .
     # Tool name to use for reviewdog reporter
     tool_name: # optional, default is reviewdog
+
+      - run: npm install -g bats
+      - run: bats -v
+
+
+  
