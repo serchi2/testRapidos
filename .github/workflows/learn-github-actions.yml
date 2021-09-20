@@ -9,30 +9,27 @@ jobs:
         with:
           node-version: '14'
       - uses: nitinsh99/checkstyle-action@1.0.0
-  with:
-    # GITHUB_TOKEN.
-    github_token: # optional, default is ${{ github.token }}
-    # Report level for reviewdog [info,warning,error]
-    level: # optional, default is info
-    # Reporter of reviewdog command [github-pr-check,github-pr-review]
-    reporter: # optional, default is github-pr-check
-    # Filtering for the reviewdog command [added,diff_context,file,nofilter].
-Default is `added`.
+        with:
+          # GITHUB_TOKEN.
+          github_token: # optional, default is ${{ github.token }}
+          # Report level for reviewdog [info,warning,error]
+          level: # optional, default is info
+          # Reporter of reviewdog command [github-pr-check,github-pr-review]
+          reporter: # optional, default is github-pr-check
+          # Filtering for the reviewdog command [added,diff_context,file,nofilter].
+           #Default is `added`.
 
-    filter_mode: # optional, default is added
+          filter_mode: # optional, default is added
     # Exit code for reviewdog when errors are found [true,false]
-Default is `false`.
+           #Default is `false`.
 
-    fail_on_error: # optional, default is false
-    # Checkstyle config file
-    checkstyle_config: # default is google_checks.xml
-    # Working directory relative to the root directory.
-    workdir: # optional, default is .
-    # Tool name to use for reviewdog reporter
-    tool_name: # optional, default is reviewdog
+          fail_on_error: # optional, default is false
+          # Checkstyle config file
+          checkstyle_config: # default is google_checks.xml
+          # Working directory relative to the root directory.
+          workdir: # optional, default is .
+          # Tool name to use for reviewdog reporter
+          tool_name: # optional, default is reviewdog
 
       - run: npm install -g bats
       - run: bats -v
-
-
-  
